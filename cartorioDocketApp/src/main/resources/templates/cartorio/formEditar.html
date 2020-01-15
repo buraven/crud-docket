@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>Editar Cartorio</title>
+	<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="style/styleCss.css"/>
+</head>
+<body>
+
+	<header>
+		<nav class="menu">
+		    <div class="nav-wrapper">
+		      <a href="#" class="brand-logo">Editar de Cartorio:</a>
+		      <ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="/listaCartorios" class="waves-effect waves-light btn"><i class="material-icons left">format_list_bulleted</i>Lista de Cartorios</a></li>
+		      </ul>
+		    </div>
+		</nav>
+	
+	</header>	
+	
+	<div th:each="cartorio : ${cartorio}" class="container formCartorio">	
+		<form class="container" method="post" action="editarCartorio">
+			<input type="hidden" name="id" th:value="${cartorio.id}" />
+			Nome: <input type="text" th:value="${cartorio.nome}" name="nome"/>
+			<button class="waves-effect waves-light btn" type="submit">Salvar</button>	
+		</form>
+	</div>
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+
+
+</html>

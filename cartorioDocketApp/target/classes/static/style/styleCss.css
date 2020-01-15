@@ -1,0 +1,28 @@
+.visualizarCartorio{
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	margin-bottom: 60px;
+}
+
+.formCartorio{
+	box-shadow: 0px 0px 5px grey;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	margin-bottom: 60px;
+}
+
+.menu{
+	background-color: #117A65;
+}
+
+body {
+	background-color: #F7F9F9;
+}
+
+.btn-visualizar{
+	border: none;
+    outline: none;
+    background: none;
+}
