@@ -45,9 +45,8 @@
 					<form action="/visualizarCartorio" method="POST">
 						<input th:value="${cartorio.id}" name="id" type="hidden">
 						<button type="submit" class="btn-visualizar">
-						<a th:href="${cartorio.id}">
-							<span th:text="${cartorio.id}"></span>
-						</a></button>
+							<span th:text="${cartorio.id}" class="green-text"></span>
+						</button>
 					</form>
 				</td>
 						
