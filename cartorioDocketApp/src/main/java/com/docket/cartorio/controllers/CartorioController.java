@@ -1,20 +1,18 @@
 package com.docket.cartorio.controllers;
 
-import javax.validation.Valid;
-
+import com.docket.cartorio.models.Cartorio;
+import com.docket.cartorio.repository.CartorioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.docket.cartorio.repository.CartorioRepository;
-import com.docket.cartorio.models.Cartorio;
+import javax.validation.Valid;
 
 @Controller
 public class CartorioController {
@@ -68,7 +66,7 @@ public class CartorioController {
 	}
 
 	@RequestMapping(value = "/editarCartorio", method = RequestMethod.POST)
-	public String editar(@Valid Cartorio cartorio, BindingResult result, RedirectAttributes attributes) {
+	public String editar(@Valid Cartorio cartorio, BindingResult result) {
 		if (result.hasErrors()) {
 			return "redirect:/formEditar";
 		}
